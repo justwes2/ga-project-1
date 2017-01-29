@@ -1,0 +1,52 @@
+body {
+  background-color: yellow;
+}
+header {
+  background-color: grey;
+}
+.board {
+  margin: 5% auto;
+  background-color: tan;
+  width: 80%;
+  height: 550px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tower {
+  background-color: blue;
+  width: 30%;
+  height: 500px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.disc {
+  height: 10%;
+  width: 30%;
+  background-color: purple;
+  border: 1px solid black;
+}
+#disc1 {
+  width: 30%;
+}
+#disc2 {
+  width: 40%;
+}
+#disc3 {
+  width: 50%;
+}
+#disc4 {
+  width: 60%;
+}
+#disc5 {
+  width: 70%;
+}
+#disc6 {
+  width: 80%;
+}
+#disc7 {
+  width: 90%;
+}
