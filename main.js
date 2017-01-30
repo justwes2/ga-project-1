@@ -1,28 +1,42 @@
-//timer
-// var reset = $('#reset')
-var start = $('#start')
-// var pause = $('#pause')
+//create the discs
+function createDiscs () {
+  $("#firstTower").append (
+    '<div class="disc" id="disc1"></div>',
+    '<div class="disc" id="disc2"></div>',
+    '<div class="disc" id="disc3"></div>',
+    '<div class="disc" id="disc4"></div>',
+    '<div class="disc" id="disc5"></div>',
+    '<div class="disc" id="disc6"></div>',
+    '<div class="disc" id="disc7"></div>'
+  )
+}
+createDiscs()
 
+//timer
 var seconds = 0
 var isTimerRunning = false
 var timerId
-
 function updateTime(){
   seconds++
   $('#timer').html(`Time Elapsed: ${seconds}`)
 }
-
-// reset.click(function(){
-//   clearInterval(timerId)
-//   seconds = 0
-//   $('#timer').html(`Stop Watch`)
-// })
-$(".board").click(function(){
+$(".disc").click(function(){
   if(!isTimerRunning){
     timerId = setInterval(updateTime, 1000)
     isTimerRunning = true
   }
 })
-// pause.click(function(){
-//   clearInterval(timerId)
-// })
+
+//select disc once clicked
+isSelected = false
+function selectCheck () {
+  if ($(".board").find(".selected") === []) {
+    isSelected = false
+  }
+}
+$(".disc").click(function () {
+  if (!isSelected){
+    $(this).addClass('selected')}
+    isSelected = true
+}
+)

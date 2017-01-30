@@ -27,7 +27,7 @@ header {
   height: 10%;
   width: 30%;
   background-color: purple;
-  border: 1px solid black;
+  border: 5px solid black;
 }
 #disc1 {
   width: 30%;
@@ -49,4 +49,7 @@ header {
 }
 #disc7 {
   width: 90%;
+}
+.selected {
+  border: 5px dotted white;
 }
