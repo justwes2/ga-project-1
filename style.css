@@ -1,23 +1,26 @@
 body {
-  /*background-image: url("./images/hall.jpg");*/
+  background-image: url("./images/paris_night.jpg");
   background-size: cover;
   background-position: center;
-  background-color: rgb(182, 225, 204);
+  background-color: rgb(214, 214, 214);
 }
 header {
-
+  margin: 20px;
   background-color: rgba(214, 214, 214, .75);
 }
 .board {
   margin: 5% auto;
   background-color: rgba(214, 214, 214, .75);
-  width: 80%;
+  width: 90%;
   height: 500px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .tower {
+  background-image: url("./images/eiffel_tower.jpg");
+  background-size: cover;
+  background-position: center;
   background-color: rgba(214, 214, 214, .5);
   width: 30%;
   height: 90%;
@@ -31,11 +34,11 @@ header {
 .disc {
   height: 10%;
   width: 30%;
-  background: url("./images/wood.jpg");
+  background: url("./images/parchment.jpg");
   background-size: cover;
   background-position: center;
   border: 2px solid grey;
-  border-radius: 10%;
+  border-radius: 20%;
 }
 footer {
   background: rgba(214, 214, 214, .75);
