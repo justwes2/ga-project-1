@@ -31,24 +31,37 @@ header {
 }
 #disc1 {
   width: 30%;
+  order: 1;
 }
 #disc2 {
   width: 40%;
+    order: 2;
 }
 #disc3 {
   width: 50%;
+    order: 3;
 }
 #disc4 {
   width: 60%;
+    order: 4;
 }
 #disc5 {
   width: 70%;
+    order: 5;
 }
 #disc6 {
   width: 80%;
+    order: 6;
 }
 #disc7 {
   width: 90%;
+    order: 7;
+}
+.base {
+  height: 0;
+  width: 0;
+  border:0;
+  order: 99;
 }
 .selected {
   border: 5px dotted white;

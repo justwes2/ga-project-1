@@ -29,15 +29,16 @@ $(".disc").click(function(){
 
 //select disc once clicked
 isSelected = false
-function selectCheck () {
-  if ($(".board").find(".selected") === []) {
-    isSelected = false
-  }
-}
+// function selectCheck () {
+//   if ($(".board").find(".selected") === []) {
+//     isSelected = false
+//   }
+// }
 $(".disc").click(function () {
-  if (!isSelected){
-    $(this).addClass('selected')
-    isSelected = true
+  // console.log(isSelected)
+  if ((!isSelected) && ($(this).css('order') < ($(this).siblings('.disc').css('order')))) {
+      isSelected = true
+      $(this).addClass('selected')
   }
   else {
     $('.selected').removeClass('selected')
@@ -47,10 +48,11 @@ $(".disc").click(function () {
 )
 //select tower
 var selectedTower
-$(".tower").click(function () {
+  $(".tower").click(function () {
   selectedTower = $(this)
-  if ($(this).find('.disc').css('width')<$('*').find('.selected').css('width')) {
+  if ($(this).find('.disc').css('order') > $('*').find('.selected').css('order')) {
     console.log('bam!')
     $(this).prepend($('.selected'))
+    $('.selected').removeClass('selected')
   }
 })
