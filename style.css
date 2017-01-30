@@ -53,3 +53,6 @@ header {
 .selected {
   border: 5px dotted white;
 }
+.tower:hover {
+  border: 1px dotted white;
+}

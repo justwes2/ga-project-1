@@ -36,7 +36,21 @@ function selectCheck () {
 }
 $(".disc").click(function () {
   if (!isSelected){
-    $(this).addClass('selected')}
+    $(this).addClass('selected')
     isSelected = true
+  }
+  else {
+    $('.selected').removeClass('selected')
+    isSelected = false
+  }
 }
 )
+//select tower
+var selectedTower
+$(".tower").click(function () {
+  selectedTower = $(this)
+  if ($(this).find('.disc').css('width')<$('*').find('.selected').css('width')) {
+    console.log('bam!')
+    $(this).prepend($('.selected'))
+  }
+})
