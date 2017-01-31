@@ -14,11 +14,17 @@ createDiscs()
 
 //timer
 var seconds = 0
+var minutes = 0
 var isTimerRunning = false
 var timerId
+var counter
 function updateTime(){
-  seconds++
-  $('#timer').html(`Time Elapsed: ${seconds}`)
+    seconds++
+    $('#timer').html(`Time Elapsed: ${minutes}:${seconds}`)
+    if (seconds === 59) {
+      minutes++
+      seconds = 0
+    }
 }
 
 //select disc once clicked
@@ -40,10 +46,8 @@ $(".tower").click(function () {
 if ($(this).find('.disc').css('order') > $('*').find('.selected').css('order')) {
   $(this).prepend($('.selected'))
   $('.selected').removeClass('selected')
-  // setTimeout(function(){ alert("Hello"); }, 3000);
-  // setTimeout (function() {
-    moveCount++
-    $('#moves').html(`Moves: ${moveCount}`)
+  moveCount++
+  $('#moves').html(`Moves: ${moveCount}`)
   isSelected = false
   if(!isTimerRunning){
     timerId = setInterval(updateTime, 1000)
@@ -54,6 +58,6 @@ if ($(this).find('.disc').css('order') > $('*').find('.selected').css('order')) 
 })
 function winTest() {
   if((document.querySelectorAll('#secondTower .disc').length === 8 ) || (document.querySelectorAll('#thirdTower .disc').length === 8 )){
-    alert(`You won in ${seconds} seconds and ${moveCount} moves!`)
+    alert(`You won in ${minutes}:${seconds} and ${moveCount} moves!`)
   }
 }
