@@ -118,6 +118,7 @@ if ($(this).find('.disc').css('order') > $('*').find('.selected').css('order')) 
 var winLength
 function winTest() {
   if((document.querySelectorAll('#secondTower .disc').length === winLength ) || (document.querySelectorAll('#thirdTower .disc').length === winLength )){
-    alert(`You won in ${minutes}:${seconds} and ${moveCount} moves!`)
+    setTimeout( function() {alert(`You won in ${minutes}:${seconds} and ${moveCount} moves!`)}, 1000)
+    clearInterval(timerId)
   }
 }
