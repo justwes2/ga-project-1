@@ -1,5 +1,5 @@
 body {
-  background-image: url("./images/paris_night.jpg");
+  background-image: url("./images/paris_night_copy.jpg");
   background-size: cover;
   background-position: center;
   background-color: rgb(214, 214, 214);
@@ -18,7 +18,7 @@ header {
   align-items: center;
 }
 .tower {
-  background-image: url("./images/eiffel_tower.jpg");
+  background-image: url("./images/eiffel_tower_copy.jpg");
   background-size: cover;
   background-position: center;
   background-color: rgba(214, 214, 214, .5);
