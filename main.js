@@ -119,10 +119,5 @@ var winLength
 function winTest() {
   if((document.querySelectorAll('#secondTower .disc').length === winLength ) || (document.querySelectorAll('#thirdTower .disc').length === winLength )){
     alert(`You won in ${minutes}:${seconds} and ${moveCount} moves!`)
-    $('*').remove('.disc')
-    clearInterval(timerId)
-    seconds = 0
-    minutes = 0
-    moves = 0
   }
 }

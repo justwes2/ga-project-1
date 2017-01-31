@@ -46,6 +46,5 @@ The approach taken
 
 installation instructions
 unsolved problems
-  stop timer  
   execute final prepend before firing alert
-  select how many discs to use
+  drag and drop functionality
