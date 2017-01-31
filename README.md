@@ -45,6 +45,8 @@ The approach taken
   The final function is the win condition test. If 7 disc elements (and an invisible base div for gravity) are present in tower, the user is alerted that they have won. This function is called at the end of the prepend function so that the function checks for a win each time a disc is moved.
 
 installation instructions
+  The game can be played in browser with no additional installation. To view the source code, or download for local use, visit the repo at "https://github.com/justwes2/ga-project-1". Users can then clone or fork the repo.
+
 unsolved problems
-  execute final prepend before firing alert
   drag and drop functionality
+  modal instead of alert for win condition
