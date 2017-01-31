@@ -1,4 +1,5 @@
 //create the discs
+
 function createDiscs () {
   $("#firstTower").append (
     '<div class="disc selected" id="disc1"></div>',
@@ -9,8 +10,66 @@ function createDiscs () {
     '<div class="disc" id="disc6"></div>',
     '<div class="disc" id="disc7"></div>'
   )
+  winLength = 8
 }
-createDiscs()
+
+function createThreeDiscs () {
+  $("#firstTower").append (
+    '<div class="disc selected" id="disc1"></div>',
+    '<div class="disc" id="disc2"></div>',
+    '<div class="disc" id="disc3"></div>'
+  )
+  winLength = 4
+}
+function createFourDiscs () {
+  $("#firstTower").append (
+    '<div class="disc selected" id="disc1"></div>',
+    '<div class="disc" id="disc2"></div>',
+    '<div class="disc" id="disc3"></div>',
+    '<div class="disc" id="disc4"></div>'
+  )
+  winLength = 5
+}
+function createFiveDiscs () {
+  $("#firstTower").append (
+    '<div class="disc selected" id="disc1"></div>',
+    '<div class="disc" id="disc2"></div>',
+    '<div class="disc" id="disc3"></div>',
+    '<div class="disc" id="disc4"></div>',
+    '<div class="disc" id="disc5"></div>'
+  )
+  winLength = 6
+}
+function createSixDiscs () {
+  $("#firstTower").append (
+    '<div class="disc selected" id="disc1"></div>',
+    '<div class="disc" id="disc2"></div>',
+    '<div class="disc" id="disc3"></div>',
+    '<div class="disc" id="disc4"></div>',
+    '<div class="disc" id="disc5"></div>',
+    '<div class="disc" id="disc6"></div>'
+  )
+  winLength = 7
+}
+//ask how many discs to create
+var button = $('#submit')
+var howMany = $("#numberDiscs").val()
+button.on('click', function(event) {
+  howMany = $("#numberDiscs").val()
+  event.preventDefault()
+  // console.log(howMany)
+  if (howMany == 3) {
+    createThreeDiscs()
+  } else if (howMany == 4) {
+    createFourDiscs()
+  } else if (howMany == 5) {
+    createFiveDiscs()
+  } else if (howMany == 6) {
+    createSixDiscs()
+  } else if (howMany == 7) {
+    createDiscs()
+  }
+})
 
 //timer
 var seconds = 0
@@ -56,8 +115,9 @@ if ($(this).find('.disc').css('order') > $('*').find('.selected').css('order')) 
   winTest()
 }
 })
+var winLength
 function winTest() {
-  if((document.querySelectorAll('#secondTower .disc').length === 8 ) || (document.querySelectorAll('#thirdTower .disc').length === 8 )){
+  if((document.querySelectorAll('#secondTower .disc').length === winLength ) || (document.querySelectorAll('#thirdTower .disc').length === winLength )){
     alert(`You won in ${minutes}:${seconds} and ${moveCount} moves!`)
   }
 }

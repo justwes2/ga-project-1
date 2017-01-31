@@ -9,6 +9,18 @@
     <header>
       <h1>Tower of Hanoi</h1>
       <p>The object of the game is to get all discs onto another tower. You can only move one disc at a time. You can only move a disc onto a larger disc. </p>
+      <p> You can play with 3 to 7 disks. Select how many you would like to use below.</p>
+      <form id='discInput'>
+        <!-- <select form='numberDiscs'>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select> -->
+        How many discs? <input type="text" name="numberDiscs" id="numberDiscs">
+        <button id="submit">Submit</button>
+      </form>
       <p id="timer">Click a tower to move the first disc.</p>
       <p id="moves"> Moves: 0</p>
     </header>

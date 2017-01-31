@@ -1,6 +1,9 @@
 # ga-project-1
 Tower of Hanoi
 
+A note on aesthetics:
+I opted for a Parisian theme as a tribute to  Édouard Lucas, the french mathematician who is credited with designing the game in 1883. The original myth of the monks in the temple moving discs was not sourced to a specific culture.
+
 Psuedocode:
 Functions needed:
 create div
@@ -43,3 +46,6 @@ The approach taken
 
 installation instructions
 unsolved problems
+  stop timer  
+  execute final prepend before firing alert
+  select how many discs to use
