@@ -34,9 +34,7 @@ header {
 .disc {
   height: 10%;
   width: 30%;
-  background: url("./images/parchment.jpg");
-  background-size: cover;
-  background-position: center;
+  background-color: rgb(221,	180, 135);
   border: 2px solid grey;
   border-radius: 20%;
 }

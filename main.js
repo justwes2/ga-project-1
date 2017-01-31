@@ -22,7 +22,7 @@ function updateTime(){
 }
 
 //select disc once clicked
-isSelected = false
+var isSelected = false
 // $(".disc").click(function () { --this doesn't work
 $(document).on('click', '.disc', function() {
   if ((!isSelected) && ($(this).css('order') < ($(this).siblings('.disc').css('order')))) {
@@ -35,22 +35,25 @@ $(document).on('click', '.disc', function() {
 }
 )
 //select tower, compare selected to top disc
-var selectedTower
-  $(".tower").click(function () {
-  selectedTower = $(this)
-  if ($(this).find('.disc').css('order') > $('*').find('.selected').css('order')) {
-    $(this).prepend($('.selected'))
-    $('.selected').removeClass('selected')
-    isSelected = false
-    if(!isTimerRunning){
-      timerId = setInterval(updateTime, 1000)
-      isTimerRunning = true
-    }
-    winTest()
+var moveCount = 0
+$(".tower").click(function () {
+if ($(this).find('.disc').css('order') > $('*').find('.selected').css('order')) {
+  $(this).prepend($('.selected'))
+  $('.selected').removeClass('selected')
+  // setTimeout(function(){ alert("Hello"); }, 3000);
+  setTimeout (function() {
+    moveCount+
+    $('#moves').html(`Moves: ${seconds}`)}, 0)
+  isSelected = false
+  if(!isTimerRunning){
+    timerId = setInterval(updateTime, 1000)
+    isTimerRunning = true
   }
+  winTest()
+}
 })
 function winTest() {
   if((document.querySelectorAll('#secondTower .disc').length === 8 ) || (document.querySelectorAll('#thirdTower .disc').length === 8 )){
-    alert(`You won in ${seconds}!`)
+    alert(`You won in ${seconds} in ${moveCount}!`)
   }
 }
