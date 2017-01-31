@@ -81,3 +81,6 @@ footer {
 .tower:hover {
   border: 1px solid white;
 }
+select {
+  margin: 20px;
+}
