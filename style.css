@@ -76,7 +76,7 @@ footer {
   order: 8;
 }
 .selected {
-  border: 2px dotted white;
+  border: 2px solid white;
 }
 .tower:hover {
   border: 1px solid white;
