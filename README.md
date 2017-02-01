@@ -48,5 +48,6 @@ installation instructions
   The game can be played in browser with no additional installation. To view the source code, or download for local use, visit the repo at "https://github.com/justwes2/ga-project-1". Users can then clone or fork the repo.
 
 unsolved problems
+  implement reset function to remove existing disks and return to initial state
   drag and drop functionality
   modal instead of alert for win condition
