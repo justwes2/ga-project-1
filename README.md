@@ -1,6 +1,10 @@
+<!-- AM: +1 informative readme -->
+<!-- AM: If you want to level up your readmes, I would recommend looking into how to write Markdown (.md files) -->
+
 # ga-project-1
 Tower of Hanoi
 
+<!-- AM: Most people don't mention things like this in their readme. Love it! -->
 A note on aesthetics:
 I opted for a Parisian theme as a tribute to  Édouard Lucas, the french mathematician who is credited with designing the game in 1883. The original myth of the monks in the temple moving discs was not sourced to a specific culture.
 
@@ -27,6 +31,7 @@ select disc
   winCondition check
     if towerSelected has 7 disc divs, alert 'You win in '# of moves'
 
+<!-- AM: Yes! -->
 User Stories:
 As a <role> I should be able to <goal> so that <reason>
 As a user I should be able to play so that I can unwind
