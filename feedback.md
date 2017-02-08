@@ -1,5 +1,5 @@
 # Project 1 Evaluation
-[inline code comments]()
+[inline code comments](https://github.com/justwes2/ga-project-1/pull/1/files)
 
 ## Deployment
 
