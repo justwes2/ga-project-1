@@ -1,6 +1,16 @@
 //create the discs
 
 function createDiscs () {
+  // AM: You could use a loop here so that you don't have to write out each of these div's individually.
+  // AM: On top of that, I think you could use a single function to generate the discs. How many discs to generate depends on whatever argument you pass into the function.
+  /*
+    function createDiscs(towerId, numDiscs){
+      for(let i=0; i<numDiscs; i++){
+        $(towerId).append(`<div class="disc" id="disc${i}"></div>`)
+      }
+    }
+  */
+
   $("#firstTower").append (
     '<div class="disc selected" id="disc1"></div>',
     '<div class="disc" id="disc2"></div>',
@@ -58,6 +68,7 @@ button.on('click', function(event) {
   howMany = $("#numberDiscs").val()
   event.preventDefault()
   // console.log(howMany)
+  // AM: My note above about refactoring the disc creation functions could end up shortening this if-else statement as well.
   if (howMany == 3) {
     createThreeDiscs()
   } else if (howMany == 4) {
@@ -90,7 +101,7 @@ function updateTime(){
 var isSelected = false
 // $(".disc").click(function () { --this doesn't work
 $(document).on('click', '.disc', function() {
-  if ((!isSelected) && ($(this).css('order') < ($(this).siblings('.disc').css('order')))) {
+  if ((!isSelected) && ($(this).css('order') < ($(this).siblings('.disc').css('order')))) { // AM: To make this line more readable, it might be helpful to define things like `$(this).css("order")` in variables at the beginning of the listener.
       isSelected = true
       $(this).addClass('selected')
   }  else {
@@ -101,6 +112,8 @@ $(document).on('click', '.disc', function() {
 )
 //select tower, compare selected to top disc
 var moveCount = 0
+// AM: What is the difference between this listener and the previous `.disc` one?
+// AM: I notice in the app that when you click on a tower, it just highlights it and doesn't seem to affect disc placement.
 $(".tower").click(function () {
 if ($(this).find('.disc').css('order') > $('*').find('.selected').css('order')) {
   $(this).prepend($('.selected'))
@@ -117,8 +130,8 @@ if ($(this).find('.disc').css('order') > $('*').find('.selected').css('order')) 
 })
 var winLength
 function winTest() {
-  if((document.querySelectorAll('#secondTower .disc').length === winLength ) || (document.querySelectorAll('#thirdTower .disc').length === winLength )){
-    setTimeout( function() {alert(`You won in ${minutes}:${seconds} and ${moveCount} moves!`)}, 1000)
+  if((document.querySelectorAll('#secondTower .disc').length === winLength ) || (document.querySelectorAll('#thirdTower .disc').length === winLength )){  // AM: Ditto my note above about defining variables at the start of the event listener.
+    setTimeout( function() {alert(`You won in ${minutes}:${seconds} and ${moveCount} moves!`)}, 1000)   // AM: Encourage you to figure out how to do this without using an `alert` -- use DOM manipulation instead!
     clearInterval(timerId)
   }
 }

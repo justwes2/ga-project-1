@@ -36,6 +36,7 @@ header {
   width: 30%;
   /*background-color: rgb(221,	180, 135);*/
   background: rgb(221,	180, 135); /* For browsers that do not support gradients */
+  /* AM: +1 radial gradients */
   background: -webkit-radial-gradient(rgb(221,	180, 135), rgb(238, 207, 174)); /* Safari 5.1 to 6.0 */
   background: -o-radial-gradient(rgb(221,	180, 135), rgb(238, 207, 174)); /* For Opera 11.6 to 12.0 */
   background: -moz-radial-gradient(rgb(221,	180, 135), rgb(238, 207, 174)); /* For Firefox 3.6 to 15 */
@@ -46,6 +47,7 @@ header {
 footer {
   background: rgba(214, 214, 214, .75);
 }
+/* AM: Great use of Flexbox to maintain proper disc order */
 #disc1 {
   width: 30%;
   order: 1;
@@ -89,4 +91,4 @@ footer {
 select {
   margin: 20px;
 }
-/*Cleared CSS Validator*/
+/*Cleared CSS Validator*/ /* AM: +1 */
